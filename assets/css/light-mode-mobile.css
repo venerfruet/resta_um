@@ -1,0 +1,119 @@
+:root{
+    --padrao: #eff2d6;
+    --azul-padrao:#03a9f4;
+    --area-game-bgcolor:white;
+    --contato-bgcolor:darkblue;
+    --contato-font:aliceblue;
+    --destaque:green;
+}
+
+.ponto{
+    cursor:
+    pointer;
+    width: 70%;
+    height: 70%;
+    margin-top: 7%;
+    margin-left: 7%;
+    background-color: var(--azul-padrao);
+    border-radius: 50%;
+    border: 3px solid var(--contato-bgcolor);
+}
+
+.campo{
+    cursor:pointer;
+    border:solid 1px var(--contato-bgcolor);
+    width:33px;
+    height:33px;
+    margin:2px;
+    border-radius:33%;
+}
+.oculto{
+    border: solid 1px var(--area-game);
+    width:33px;
+    height:33px;
+    margin:2px;
+}
+
+.linha{
+    display:
+    inline-flex;
+    width: fit-content;
+    margin: auto;
+}
+
+.destaque{
+    background-color:var(--destaque);
+}
+
+body{
+    font-family: cursive;
+    background:
+    var(--padrao);
+    max-width: 100%;
+    min-width: 70%;
+    margin: 0;
+}
+
+#area-game{
+    width: auto;
+    background-color:var(--area-game-bgcolor);
+    padding: 23px;
+    border-radius: 17px;
+}
+
+.text-game, #result-game{
+    width: auto;
+    text-align: justify;
+    background-color: var(--area-game-bgcolor);
+    color: var(--contato-bgcolor);
+    padding: 13px;
+    border-radius: 17px;
+    font-size: 10pt;
+}
+
+.titulo{
+    color:
+    var(--contato-bgcolor);
+    text-align: left;
+    margin-top: 0;
+    font-size: 7pt;
+    margin-left: 13px;
+}
+
+.contato{
+    background-color: var(--contato-bgcolor);
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.contato a{
+    text-decoration: none;
+    margin: 13px;
+    color: var(--contato-font);
+}
+
+.section-game{
+    display: block;
+}
+
+.text-game, #area-game, #result-game{
+    margin: 13px;
+    display: grid;
+}
+
+#theme{
+    position: absolute;
+    top: 7px;
+    right: 23px;
+}
+
+#toggle-theme{
+    border-radius: 13px;
+    padding: 3px;   
+    border-color: var(--contato-bgcolor);
+    color: var(--contato-font);
+    background-color: var(--contato-bgcolor);
+}
+
