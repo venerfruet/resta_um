@@ -45,7 +45,7 @@
 }
 
 body{
-   font-family: cursive;
+   font-family: sans-serif;
    background:
    var(--padrao);
    max-width: 100%;

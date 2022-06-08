@@ -8,8 +8,7 @@
 }
 
 .ponto{
-    cursor:
-    pointer;
+    cursor:pointer;
     width: 70%;
     height: 70%;
     margin-top: 7%;
@@ -45,7 +44,7 @@
 }
 
 body{
-    font-family: cursive;
+    font-family: sans-serif;
     background:
     var(--padrao);
     max-width: 100%;
