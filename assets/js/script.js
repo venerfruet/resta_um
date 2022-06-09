@@ -12,8 +12,6 @@ function iniciar(){
       let objL=document.createElement('div');
       objL.className='linha';
 
-      AREA_GAME.append(objL);
-    
       for(let col=0; col<COL_MAX; col++){
          let objC=document.createElement('div');
          let id=`${lin}${col}`;
@@ -41,7 +39,12 @@ function iniciar(){
 
          objL.append(objC);
       }
+
+      AREA_GAME.append(objL);
+    
    }
+
+   defineAgainButton();
 
 }
 
@@ -188,9 +191,11 @@ function novoPonto(){
 }
 
 function defineTheme(init=''){
+
    const toggleTheme=document.querySelector('#toggle-theme');
+
    toggleTheme.addEventListener('change',function(){
-      const stl=document.querySelector('#style');
+      const stl=document.querySelector('#style-theme');
       stl.href=this.value;
    });
 
@@ -199,7 +204,7 @@ function defineTheme(init=''){
       Array.from(toggleTheme.options).forEach((opt)=>{
          if(opt.innerText===init){
             opt.selected=true;
-            const stl=document.querySelector('#style');
+            const stl=document.querySelector('#style-theme');
             stl.href=opt.value;
          }
       });
@@ -207,9 +212,29 @@ function defineTheme(init=''){
 }
 
 function defineTemaInicio(){
+   let tema='Light Mode';
+
    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      defineTheme('Light Mode Mobile');
+      const stl=document.querySelector('#style-default');
+      stl.href='assets/css/default_mobile.css';
+      tema='Light Mode';
    }
+
+   defineTheme(tema);
+
+}
+
+function defineAgainButton(){
+
+   let btn=document.createElement('button');
+   btn.innerText='de novo';
+   btn.className='btn-again';
+   AREA_GAME.append(btn);
+
+   btn.addEventListener('click',()=>{
+      AREA_GAME.innerHTML='';
+      iniciar();
+   });
 }
 
 defineTheme();
