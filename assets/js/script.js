@@ -47,7 +47,7 @@ function iniciar(){
 
 function pontoClick(){
 
-   if(clickVazio()) return;
+   if(clickVazio.call(this)) return;
 
    if(clickDestacado.call(this)) return;
 
@@ -100,6 +100,7 @@ function retornaMap(){
 }
 
 function clickVazio(){
+   console.log(this.innerHTML);
    if(this.innerHTML==='' &&  this.className==='campo') return true;
    return false;
 }
