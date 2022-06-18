@@ -2,10 +2,10 @@ const CASAS_OCULTAS=['00','01','05','06','10','11','15','16','50','51','55','56'
 const CASA_INICIO='33';
 const AREA_GAME=document.querySelector('#area-game');
 const RESULT_GAME=document.querySelector('#result-game');
+const LIN_MAX=7;
+const COL_MAX=7;
 
 function iniciar(){
-   const LIN_MAX=7;
-   const COL_MAX=7;
 
    for(let lin=0; lin<LIN_MAX; lin++){
 
